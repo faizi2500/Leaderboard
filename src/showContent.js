@@ -1,16 +1,15 @@
 import './style.css';
 
-let scoreBoard = document.getElementById('scoreboard');
+const scoreBoard = document.getElementById('scoreboard');
 
-export const showContent = (list) => {
+const showContent = (list) => {
   list.forEach((each, index) => {
-    console.log(index);
-    const eachEntry =  document.createElement('div');
+    const eachEntry = document.createElement('div');
     eachEntry.className = 'score-entry';
+
     const name = document.createElement('p');
     name.className = 'dynamic-name';
     name.textContent = `${each.name}`;
-    console.log(name)
     eachEntry.appendChild(name);
 
     const score = document.createElement('p');
@@ -20,8 +19,10 @@ export const showContent = (list) => {
 
     scoreBoard.appendChild(eachEntry);
 
-    if(index % 2 !== 0) {
-      eachEntry.classList.add('background-color')
+    if (index % 2 !== 0) {
+      eachEntry.classList.add('background-color');
     }
   });
 };
+
+export default showContent;

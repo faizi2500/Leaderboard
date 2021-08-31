@@ -16,17 +16,14 @@ h1 {
   margin-inline: auto;
   display: grid;
   grid-template-columns: 50% 50%;
-  
 }
-
-
 
 .heading {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-} 
+}
 
 .input-form {
   width: 50%;
@@ -37,8 +34,6 @@ h1 {
   justify-content: space-around;
   align-items: center;
 }
-
-
 
 .input-width {
   width: 100%;
@@ -54,8 +49,9 @@ h1 {
 .refresh {
   height: 40px;
   width: 115px;
+
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
   font-size: 1.05rem;
   cursor: pointer;
 }
@@ -63,7 +59,7 @@ h1 {
 .submit {
   height: 40px;
   width: 115px;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
   align-self: flex-end;
   font-size: 1.05rem;
   cursor: pointer;
@@ -77,6 +73,7 @@ h1 {
 
 .score-entry {
   display: flex;
+
   /* width: 25%;
   justify-content: space-between; */
 }

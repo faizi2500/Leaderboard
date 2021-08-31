@@ -1,8 +1,8 @@
 // import _ from 'lodash';
 import './style.css';
-import { showContent } from './showContent.js';
+import showContent from './showContent.js';
 
-const list =[
+const list = [
   {
     name: 'Faizan',
     score: 98,
@@ -22,11 +22,8 @@ const list =[
   {
     name: 'Donard',
     score: 96,
-  }
+  },
 ];
-
-
-let scoreBoard = document.getElementById('scoreboard');
 
 const displayContent = (list, show) => {
   show(list);
