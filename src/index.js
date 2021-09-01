@@ -25,27 +25,13 @@ submit.addEventListener('click', async (e)=> {
 refresh.addEventListener('click', async  (e)=> {
   e.preventDefault;
   const getData = await getFromAPI(link);
-  // console.log(getData.result)
   const totalPlayers =  getData.result
-  console.log(totalPlayers);
   let obj = totalPlayers.pop();
-  console.log(obj);
   list.push(obj);
-  console.log(list)
-  // console.log(list);
   showContent(list);
 
 })
 
-// const displayContent = (list, show) => {
-//   show(list);
-// };
-
 window.onload = async () => {
-  // const gameUrl = await createGame(url);
-  // let gamesID = gameUrl.result;
-  // console.log(gamesID)
-  // gamesID = gamesID.substring(14, 34);
-  // console.log(typeof gamesID);
  showContent()
 };

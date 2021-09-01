@@ -1,8 +1,9 @@
-import './style.css';
+// import './style.css';
 
 const scoreBoard = document.getElementById('scoreboard');
 
 const showContent = (list) => {
+  console.log(list);
   scoreBoard.innerHTML ='';
   list.forEach((each, index) => {
     const eachEntry = document.createElement('div');

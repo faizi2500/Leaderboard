@@ -1,5 +1,3 @@
-
-
 const sendScores = async(name, score, gameUrl) => {
   const data = await fetch(gameUrl, {
     method: 'POST',
