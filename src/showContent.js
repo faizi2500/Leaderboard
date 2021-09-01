@@ -3,8 +3,7 @@
 const scoreBoard = document.getElementById('scoreboard');
 
 const showContent = (list) => {
-  console.log(list);
-  scoreBoard.innerHTML ='';
+  scoreBoard.innerHTML = '';
   list.forEach((each, index) => {
     const eachEntry = document.createElement('div');
     eachEntry.className = 'score-entry';

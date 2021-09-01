@@ -1,10 +1,9 @@
-import sendScores from "./sendScores";
-import createGame from "./createGame";
+import createGame from './createGame.js';
 
 const userName = document.getElementById('user-name');
 const userScore = document.getElementById('user-score');
-const inputForm = document.getElementById('error-parent');
 
+/* eslint consistent-return: "error" */
 const getInput = async (url) => {
   const result = await createGame(url);
   let gameID = result.result;
@@ -12,14 +11,16 @@ const getInput = async (url) => {
   const gameUrl = `${url}${gameID}/scores/`;
 
   const showError = document.querySelector('.error-style');
-  if(userName.value === "" || userScore.value === ""){
+  if (userName.value === '' || userScore.value === '') {
     showError.style.display = 'block';
+  } else {
+    const playerName = userName.value;
+    const playerScore = userScore.value;
+    showError.style.display = 'none';
+    userName.value = '';
+    userScore.value = '';
+    return { playerName, playerScore, gameUrl };
   }
-  else {
-    let playerName = userName.value;
-    let playerScore = userScore.value;
-    showError.style.display = 'none'; 
-    return {playerName, playerScore, gameUrl};
-  }
-}
-export default getInput
+  return ('Please insert value');
+};
+export default getInput;

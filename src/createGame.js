@@ -4,13 +4,13 @@ const createGame = async (url) => {
     body: JSON.stringify(
       {
         name: 'Chess Game',
-      }
+      },
     ),
     headers: {
       'Content-type': 'application/json; charset=UTF-8',
     },
-  })
+  });
   return response.json();
 };
 
-export default createGame
+export default createGame;
