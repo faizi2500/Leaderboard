@@ -11,14 +11,14 @@
       <div class="section-one">
         <div class="heading">
           <h2 class="score-heading">Recent Scores</h2>
-          <button type="button" class="refresh">Refresh</button>
+          <button type="button" class="refresh" id = "refresh-btn">Refresh</button>
         </div>
         <div class="score-board" id = "scoreboard"></div>
       </div>
 
-      <div class="section-two">
+      <div class="section-two" id="error-parent">
         <h2 class="score-heading">Add Your Scores</h2>
-        <div class="input-form">
+        <div class="input-form" >
           <input
             type="text"
             class="input-width"
@@ -31,8 +31,9 @@
             placeholder="Your Score"
             id="user-score"
           />
-          <button type="submit" class="submit">Submit</button>
+          <button type="submit" class="submit" id = "submit-btn">Submit</button>
         </div>
+        <p class="error-style">Please insert your name and score</p>
       </div>
     </section>
   </body>

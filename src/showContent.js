@@ -1,15 +1,16 @@
-import './style.css';
+// import './style.css';
 
 const scoreBoard = document.getElementById('scoreboard');
 
 const showContent = (list) => {
+  scoreBoard.innerHTML = '';
   list.forEach((each, index) => {
     const eachEntry = document.createElement('div');
     eachEntry.className = 'score-entry';
 
     const name = document.createElement('p');
     name.className = 'dynamic-name';
-    name.textContent = `${each.name}`;
+    name.textContent = each.user;
     eachEntry.appendChild(name);
 
     const score = document.createElement('p');

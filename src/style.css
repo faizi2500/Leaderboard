@@ -73,9 +73,6 @@ h1 {
 
 .score-entry {
   display: flex;
-
-  /* width: 25%;
-  justify-content: space-between; */
 }
 
 .dynamic-name {
@@ -85,4 +82,23 @@ h1 {
 
 .background-color {
   background-color: #dcdcdc;
+}
+
+.error-style {
+  display: none;
+  text-align: center;
+  color: red;
+  font-weight: 600;
+}
+
+.name-empty {
+  width: 100%;
+  font-size: 1.15rem;
+  border: 1px solid red;
+}
+
+.user-empty {
+  width: 100%;
+  font-size: 1.15rem;
+  border: 1px solid red;
 }
