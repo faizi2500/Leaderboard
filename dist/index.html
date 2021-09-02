@@ -6,11 +6,16 @@
     <title>Leader Board - Faizan</title>
   <script defer src="main.js"></script></head>
   <body>
+    <header>
+      <ul class ="new-game" id= 'new-link'> 
+        <li class="new-game-btn"> Practice Mode</li>
+      </ul>
+    </header>
     <h1>Leaderboard</h1>
     <section class="container flex-container">
       <div class="section-one">
         <div class="heading">
-          <h2 class="score-heading">Recent Scores</h2>
+          <h2 class="score-list-heading">Recent Scores</h2>
           <button type="button" class="refresh" id = "refresh-btn">Refresh</button>
         </div>
         <div class="score-board" id = "scoreboard"></div>
@@ -33,7 +38,8 @@
           />
           <button type="submit" class="submit" id = "submit-btn">Submit</button>
         </div>
-        <p class="error-style">Please insert your name and score</p>
+        <p class="added">Submitted. Please click "Refresh" button </p>
+        <p class="error-style">Note: Please insert your name and score</p>
       </div>
     </section>
   </body>

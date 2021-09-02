@@ -3,9 +3,37 @@ body {
   box-sizing: border-box;
   padding: 0;
   font-size: 16px;
+  background-image: linear-gradient(to left, #051937, #1a4659, #4f7376, #8ea198, #cdd0c8);
+
+  /* background-repeat: no-repeat ;
+  background-position: center; */
+}
+
+.new-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+  float: right;
+  margin-right: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  min-width: 12%;
+  min-height: 35px;
+  padding: 0;
+  background: #cdd0c8;
+  color: #051937;
+  cursor: pointer;
+}
+
+.new-game-btn {
+  font-size: 1.15rem;
+  font-weight: 900;
 }
 
 h1 {
+  color: #051a38;
   font-size: 3.8rem;
   margin-left: 2%;
   margin-top: 3%;
@@ -28,7 +56,7 @@ h1 {
 .input-form {
   width: 50%;
   margin-inline: auto;
-  min-height: 130px;
+  min-height: 140px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -40,8 +68,15 @@ h1 {
   font-size: 1.15rem;
 }
 
+.score-list-heading {
+  color: #051a38;
+  font-size: 2.6rem;
+  font-weight: bolder;
+}
+
 .score-heading {
   /* margin-block: 0; */
+  color: #c6cbc3;
   font-size: 2.6rem;
   text-align: center;
 }
@@ -51,28 +86,45 @@ h1 {
   width: 115px;
 
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  background-color: #c6cbc3;
+  border-color: transparent;
+  border-radius: 8px;
   font-size: 1.05rem;
   cursor: pointer;
+}
+
+.refresh:hover {
+  background-color: #496d72;
+  color: #c6cbc3;
 }
 
 .submit {
   height: 40px;
   width: 115px;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0, rgba(255, 255, 255, 0.8) -6px -2px 16px 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  background-color: #c6cbc3;
+  border-color: transparent;
+  border-radius: 8px;
   align-self: flex-end;
   font-size: 1.05rem;
   cursor: pointer;
 }
 
+.submit:hover {
+  background-color: #496d72;
+  color: #c6cbc3;
+}
+
 .score-board {
-  border: 3px solid black;
+  border: 3px solid #c6cbc3;
 }
 
 /* JS content styling */
 
 .score-entry {
   display: flex;
+  font-size: 1.15rem;
 }
 
 .dynamic-name {
@@ -81,14 +133,21 @@ h1 {
 }
 
 .background-color {
-  background-color: #dcdcdc;
+  background: rgba(220, 220, 220, 0.5);
 }
 
 .error-style {
   display: none;
   text-align: center;
-  color: red;
-  font-weight: 600;
+  color: white;
+  font-size: 1.15rem;
+}
+
+.added {
+  display: none;
+  text-align: center;
+  color: white;
+  font-size: 1.15rem;
 }
 
 .name-empty {

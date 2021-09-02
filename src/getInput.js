@@ -1,25 +1,23 @@
-import createGame from './createGame.js';
-
 const userName = document.getElementById('user-name');
 const userScore = document.getElementById('user-score');
 
-/* eslint consistent-return: "error" */
-const getInput = async (url) => {
-  const result = await createGame(url);
-  let gameID = result.result;
-  gameID = gameID.substring(14, 34);
-  const gameUrl = `${url}${gameID}/scores/`;
-
+const getInput = async () => {
   const showError = document.querySelector('.error-style');
+  const added = document.querySelector('.added');
   if (userName.value === '' || userScore.value === '') {
     showError.style.display = 'block';
   } else {
     const playerName = userName.value;
     const playerScore = userScore.value;
     showError.style.display = 'none';
+    added.style.display = 'block';
+    setTimeout(() => {
+      added.style.display = 'none';
+    }, 3000);
+    // added.style.display = 'block'
     userName.value = '';
     userScore.value = '';
-    return { playerName, playerScore, gameUrl };
+    return { playerName, playerScore };
   }
   return ('Please insert value');
 };

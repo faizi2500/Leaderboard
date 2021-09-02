@@ -7,7 +7,7 @@
 - Callbacks, Promises, and async functions
 - Writing modular JS
 
-![screenshot](./src/leaderboard.png)
+![screenshot](./src/final-leaderboard.png)
 
 Additional description about the project and its features.
 
