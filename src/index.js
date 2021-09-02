@@ -5,7 +5,7 @@ import sendScores from './sendScores.js';
 import getFromAPI from './getFromAPI.js';
 
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
-const urlWithGame = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Hhwe2n6AjYf5sNhXQS1p/scores/'
+const urlWithGame = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/2aj9ZLFs3uhbhcYLybFr/scores/'
 const submit = document.getElementById('submit-btn');
 const refresh = document.getElementById('refresh-btn');
 let list = [];
