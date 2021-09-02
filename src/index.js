@@ -38,18 +38,12 @@ newGame.addEventListener('click', async (e) => {
   gameID = gameID.substring(14, 34);
   newUrlWithGame = `${url}${gameID}/scores/`;
   list = [];
-  console.log(newUrlWithGame);
-  urlWithGame = newUrlWithGame
-  console.log(urlWithGame)
-})
+  urlWithGame = newUrlWithGame;
+});
 
 window.onload = async () => {
-  console.log(newUrlWithGame);
-  console.log(urlWithGame);
   const getData = await getFromAPI(urlWithGame);
   const totalPlayers = getData.result;
   list = totalPlayers;
   showContent(list);
 };
-
-

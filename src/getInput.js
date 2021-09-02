@@ -1,5 +1,3 @@
-import createGame from './createGame.js';
-
 const userName = document.getElementById('user-name');
 const userScore = document.getElementById('user-score');
 
@@ -12,10 +10,10 @@ const getInput = async () => {
     const playerName = userName.value;
     const playerScore = userScore.value;
     showError.style.display = 'none';
-    added.style.display = 'block'
+    added.style.display = 'block';
     setTimeout(() => {
-      added.style.display = 'none'
-    }, 3000)
+      added.style.display = 'none';
+    }, 3000);
     // added.style.display = 'block'
     userName.value = '';
     userScore.value = '';

@@ -4,6 +4,7 @@ body {
   padding: 0;
   font-size: 16px;
   background-image: linear-gradient(to left, #051937, #1a4659, #4f7376, #8ea198, #cdd0c8);
+
   /* background-repeat: no-repeat ;
   background-position: center; */
 }
@@ -16,8 +17,7 @@ body {
   list-style: none;
   float: right;
   margin-right: 10px;
-  color: white;
-  border: 1px solid black; 
+  border: 1px solid black;
   border-radius: 4px;
   min-width: 12%;
   min-height: 35px;
@@ -84,8 +84,9 @@ h1 {
 .refresh {
   height: 40px;
   width: 115px;
+
   /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   background-color: #c6cbc3;
   border-color: transparent;
   border-radius: 8px;
@@ -101,7 +102,7 @@ h1 {
 .submit {
   height: 40px;
   width: 115px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   background-color: #c6cbc3;
   border-color: transparent;
   border-radius: 8px;
@@ -124,7 +125,6 @@ h1 {
 .score-entry {
   display: flex;
   font-size: 1.15rem;
-  
 }
 
 .dynamic-name {
@@ -133,7 +133,6 @@ h1 {
 }
 
 .background-color {
-  background-color: #dcdcdc;
   background: rgba(220, 220, 220, 0.5);
 }
 
