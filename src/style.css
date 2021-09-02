@@ -8,6 +8,30 @@ body {
   background-position: center; */
 }
 
+.new-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+  float: right;
+  margin-right: 10px;
+  color: white;
+  border: 1px solid black; 
+  border-radius: 4px;
+  min-width: 12%;
+  min-height: 35px;
+  padding: 0;
+  background: #cdd0c8;
+  color: #051937;
+  cursor: pointer;
+}
+
+.new-game-btn {
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
 h1 {
   color: #051a38;
   font-size: 3.8rem;
@@ -92,7 +116,7 @@ h1 {
 }
 
 .score-board {
-  border: 3px solid black;
+  border: 3px solid #c6cbc3;
 }
 
 /* JS content styling */
