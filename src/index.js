@@ -8,6 +8,9 @@ import createGame from './createGame.js';
 const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
 let newUrlWithGame;
 let urlWithGame = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/K6M7cT3zpdPIl0p6GBmZ/scores/';
+let urlList = [urlWithGame];
+localStorage.setItem('urlList', JSON.stringify(urlList));
+console.log(urlList);
 const submit = document.getElementById('submit-btn');
 const refresh = document.getElementById('refresh-btn');
 const newGame = document.getElementById('new-link');
@@ -39,11 +42,30 @@ newGame.addEventListener('click', async (e) => {
   let gameID = result.result;
   gameID = gameID.substring(14, 34);
   newUrlWithGame = `${url}${gameID}/scores/`;
-  list = [];
-  urlWithGame = newUrlWithGame;
+  urlList.pop()
+  urlList.push(newUrlWithGame);
+  // console.log(urlList)
+  local(urlList);
+  return urlList;
+  
+  // urlList = JSON.parse(localStorage.getItem('urlList'));
+  // list = [];
+  // urlWithGame = newUrlWithGame;
 });
 
+const local = (urlList) => {
+  localStorage.setItem('urlList', JSON.stringify(urlList));
+  urlList = JSON.parse(localStorage.getItem('urlList'));
+  return urlList;
+}
+
 window.onload = async () => {
+  console.log(urlList);
+  urlList = JSON.parse(localStorage.getItem('urlList'));
+  let urlListLength = urlList.length;
+  console.log(urlListLength);
+  let gameAPI = urlList[0];
+  console.log(gameAPI);
   const getData = await getFromAPI(urlWithGame);
   const totalPlayers = getData.result;
   list = totalPlayers;
