@@ -32,6 +32,8 @@ refresh.addEventListener('click', async (e) => {
 });
 
 newGame.addEventListener('click', async (e) => {
+  const scoreBoard = document.getElementById('scoreboard');
+  scoreBoard.innerHTML = '';
   e.preventDefault();
   const result = await createGame(url);
   let gameID = result.result;
